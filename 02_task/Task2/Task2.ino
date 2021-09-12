@@ -49,7 +49,7 @@ void readSerial(void *parameters) {
     // Read characters from serial
     if (Serial.available() > 0) {
       c = Serial.read();
-      Serial.print(c);
+
       // Update delay variable and reset buffer if we get a newline character
       if (c == '\n') {
         led_delay = atoi(buf);
