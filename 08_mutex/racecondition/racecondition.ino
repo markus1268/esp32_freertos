@@ -24,7 +24,8 @@ void incTask(void *parameters)
         // Roundabout way to do "shared_var++" randomly and poorly
         local_var = shared_var;
         local_var++;
-        vTaskDelay(random(100, 500) / portTICK_PERIOD_MS);
+        // vTaskDelay(random(100, 500) / portTICK_PERIOD_MS);
+        vTaskDelay(500/ portTICK_PERIOD_MS);
         shared_var = local_var;
 
         // Print out new shared variable
